@@ -1,0 +1,485 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.css">
+  <link rel="stylesheet" href="./css/dexx.css">
+  <script src="./js/jquery-1.11.2.min.js" charset="utf-8"></script>
+  <script src="./js/index.js" charset="utf-8"></script>
+  <style>
+    .footer_01 {
+      padding: 20px 10px;
+      width: 1250px;
+    }
+
+    .footer_01:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .footer_logo {
+      float: none;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .footer_logo img {
+      height: 40px;
+    }
+
+    .footer_info {
+      float: none;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    .address ul {
+      text-align: center;
+    }
+
+    .address ul li {
+      position: relative;
+      display: inline-block;
+      padding: 0 2px;
+      font-size: 12px;
+      font-family: Arial;
+      color: #999;
+      line-height: 20px;
+      text-align: left;
+    }
+
+    .footer_01 {
+      padding: 20px 0;
+    }
+
+    .footer_logo {
+      float: left;
+      padding: 40px 0 0 0;
+    }
+
+    .footer_info {
+      float: left;
+      text-align: left;
+      padding-left: 50px;
+    }
+
+    .address ul {
+      text-align: left;
+    }
+
+    .sns_wrap {
+      position: absolute;
+      right: 0;
+      top: 20px;
+      margin-top: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="topmenudiv"
+      style="width: 100%; z-index: 9999; opacity: .8; background-color: white; border-bottom: 1px solid white;">
+      <div id="toptitle">
+        <a href="/index.html">
+          <img src="./jpg/logo1503.jpg" />
+        </a>
+      </div>
+      <div id="topmenu">
+        <ul>
+          <li>한의원소개
+            <ul>
+              <li>한의원소개</li>
+              <li>오시는길</li>
+            </ul>
+          </li>
+          <li>자동차보험</li>
+          <li>통증클리닉</li>
+          <li>해독클리닉</li>
+          <li>시설 둘러보기
+            <ul>
+              <li class="goto" base="center" go="notice">시설둘러보기</li>
+              <li>공지사항</li>
+              <li>질문과 답변</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="mainpic">
+      <div id="changeimg">
+        <img src="./jpg/img1.jpg" style="height: 750px; width: 100%;">
+      </div>
+      <div class="mblock">
+        <style>
+          .blockst ul {
+            padding: 0 10px;
+          }
+
+          .blockst ul li {
+            margin: 10px auto 10px;
+          }
+
+          .blockst ul:after {
+            content: '';
+            display: block;
+            clear: both;
+          }
+
+          .blockst ul li {
+            float: left;
+            width: 100%;
+            padding: 70px 0;
+            box-sizing: border-box;
+          }
+
+          .blockst ul li.left {
+            background: #f89d57;
+            color: #fff;
+          }
+
+          .blockst ul li.right {
+            background: #4d917a;
+            color: #fff;
+          }
+
+          .blockst ul li>div {
+            display: block;
+            width: 100%;
+            text-align: center;
+          }
+
+          .blockst ul li h3 {
+            font-size: 24px;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+            font-family: 'Noto Sans', NanumGothic, '나눔고딕', 'Open Sans', sans-serif;
+            font-weight: 400;
+          }
+
+          .blockst ul li p {
+            font-size: 13px;
+            letter-spacing: -.5px;
+            margin-bottom: 15px;
+          }
+
+          .blockst ul li .more a {
+            display: inline-block;
+            color: #fff;
+            font-size: 12px;
+            border: 1px solid #fff;
+            border-radius: 3px;
+            padding: 10px 20px;
+          }
+
+          @media screen and (min-width: 790px) {
+            .blockst ul {
+              padding: 0 0px;
+            }
+
+            .blockst ul li {
+              margin: 0
+            }
+
+            .blockst ul li {
+              width: 50%;
+              padding: 100px 0;
+              height: 350px;
+            }
+
+            .blockst ul li>div {
+              display: inline-block;
+              width: 384px;
+            }
+
+            .blockst ul li.left {
+              text-align: right;
+            }
+
+            .blockst ul li.right {
+              text-align: left;
+            }
+
+            .blockst ul li h3 {
+              font-size: 30px;
+              letter-spacing: -2px;
+            }
+
+            .blockst ul li p {
+              font-size: 16px;
+              letter-spacing: -1px;
+            }
+
+            .blockst ul li .more a {
+              font-size: 14px;
+            }
+          }
+
+          @media screen and (min-width: 790px) {
+            .blockst ul li>div {
+              width: 550px;
+            }
+          }
+        </style>
+        <div class="blockst">
+          <ul>
+            <li class="left">
+              <div>
+                <h3>진행중인 프로젝트</h3>
+                <p>
+                  더착한 아파트 신축공사중 입니다.<br><br>
+                </p>
+                <div class="more"><a href="">자세히보기+</a></div>
+              </div>
+            </li>
+            <li class="right">
+              <div>
+                <h3>지난 프로젝트</h3>
+                <p>
+                  많은 프로젝트를 성공적으로 마무리 했습니다.<br><br>
+                </p>
+                <div class="more"><a href="">자세히보기+</a></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="mblock">
+      <style>
+        #midmenu {
+          padding: 50px 0;
+        }
+
+        #midmenu ul:after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+
+        #midmenu ul li {
+          float: left;
+          width: 100%;
+          padding: 20px 10px;
+          box-sizing: border-box;
+        }
+
+        #midmenu ul li:after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+
+        #midmenu ul li>div {
+          float: left;
+          box-sizing: border-box;
+        }
+
+        #midmenu ul li .icon {
+          width: 100%;
+          padding: 10px;
+          box-sizing: border-box;
+          text-align: center;
+        }
+
+        #midmenu ul li .icon span {
+          font-size: 50px;
+          font-weight: normal;
+          color: #58B530
+        }
+
+        #midmenu ul li .block {
+          width: 100%;
+          text-align: center;
+          box-sizing: border-box;
+        }
+
+        #midmenu ul li .block h3 {
+          font-size: 24px;
+          letter-spacing: -1px;
+          margin-bottom: 15px;
+          font-family: 'Noto Sans', NanumGothic, '나눔고딕', 'Open Sans', sans-serif;
+          font-weight: 400;
+        }
+
+        #midmenu ul li .block p {
+          font-size: 13px;
+          letter-spacing: -.5px;
+          margin-bottom: 15px;
+        }
+
+        #midmenu ul li .block .more a {
+          display: inline-block;
+          color: #333;
+          font-size: 12px;
+          border: 1px solid #333;
+          border-radius: 3px;
+          padding: 10px 20px;
+        }
+
+        @media screen and (min-width: 768px) {
+          #midmenu {
+            padding: 70px 0;
+          }
+
+          #midmenu ul li {
+            width: 50%;
+            padding: 20px 20px;
+          }
+
+          #midmenu ul li .icon {
+            width: 20%;
+          }
+
+          #midmenu ul li .block {
+            width: 80%;
+            text-align: left;
+            padding: 0 10px;
+          }
+
+          #midmenu ul li .block h3 {
+            font-size: 30px;
+            letter-spacing: -2px;
+          }
+
+          #midmenu ul li .block p {
+            font-size: 16px;
+            letter-spacing: -1px;
+          }
+
+          #midmenu ul li .block .more a {
+            font-size: 14px;
+          }
+        }
+
+        @media screen and (min-width: 1100px) {
+          #midmenu {
+            padding: 100px 0;
+          }
+
+          #midmenu ul li {
+            padding: 20px 50px;
+          }
+        }
+      </style>
+
+      <div id="midmenu">
+        <div class="width_wrap">
+          <ul>
+            <li>
+              <div class="icon"><img src="./jpg/sagak.jpg" alt=""></span></div>
+              <div class="block">
+                <h3>SEO 최적화 도구</h3>
+                <p>
+                  온라인 광고에만 의존하는게 아닌 귀사의 사이트를 SEO 최적화 작업을 통해 검색시 노출 결과를 좀더 상위로 끌어올릴 수 있습니다.<br>
+                  이를 위한 기본 도구(Tools)들이 제공됩니다.
+                </p>
+                <div class="more"><a href="">자세히보기+</a></div>
+              </div>
+            </li>
+            <li>
+              <div class="icon"><img src="./jpg/one.jpg" alt=""></span></div>
+              <div class="block">
+                <h3>CMS 솔루션 제공</h3>
+                <p>
+                  홈페이지의 수정작업은 업체에 맡겨야만 가능할 필요가 없습니다.<br>
+                  직접 수정이 가능하도록 CMS 솔루션이 기본 제공됩니다.<br>
+                  이는 귀사의 홈페이지 유지관리를 신속하게 하고 유지관리 비용을 절감시켜 줍니다.
+                </p>
+                <div class="more"><a href="">자세히보기+</a></div>
+              </div>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <div class="icon"><img src="./jpg/stick.jpg" alt=""></span></div>
+              <div class="block">
+                <h3>무상 수정 서비스</h3>
+                <p>
+                  홈페이지제작 완료 후 홈페이지 운영중에 수정이 필요할 경우 무상으로 수정 서비스가 가능합니다.<br>
+                  수정 내용이 간단한 경우에 한하며 헬로웹 호스팅 이용 고객에 한합니다.<br>
+                  운영비용 때문에 걱정하실 필요가 없습니다.
+                </p>
+                <div class="more"><a href="">자세히보기+</a></div>
+              </div>
+            </li>
+            <li>
+              <div class="icon"><img src="./jpg/case.jpg" alt=""></span></div>
+              <div class="block">
+                <h3>기타 무상 서비스</h3>
+                <p>
+                  강력한 보안과 성능의 윈도우 웹 호스팅 1년 무료 서비스.<br>
+                  회사 전용 웹메일 서비스 1년 무료 서비스 됩니다.<br>
+                  도메인 1개 1년 무료 서비스 됩니다.
+                </p>
+                <div class="more"><a href="">자세히보기+</a></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="width_wrap">
+        <a href="#wrap" id="gotop" class="on">TOP</a>
+        <div class="sns_wrap">
+          <div class="sns_icon">
+            <a href="#" class="icon-facebook2"></a>
+            <a href="#" class="icon-twitter2"></a>
+            <a href="#" class="icon-instagram"></a>
+          </div>
+        </div>
+        <div class="footer_01">
+          <div class="footer_logo">
+            <a href="/index.html">
+              <img src="./jpg/logo1503.jpg" style="vertical-align:middle;border:0;" alt="">
+            </a>
+          </div>
+          <div class="footer_info">
+            <div class="navi_foot">
+              <ul>
+                <li>
+                  한의원소개
+                </li>
+                <li>
+                  자동차보험
+                </li>
+                <li>
+                  해독클리닉
+                </li>
+                <li>
+                  문의사항
+                </li>
+              </ul>
+            </div>
+            <div class="address">
+              <ul>
+                <li>상호: 치유본한의원</li>
+                <li>대표자: 채기원</li>
+                <li>주소: 경기 고양시 일산동구 중앙로1261번길 61 (장항동) 8층 일부 , 9층</li>
+              </ul>
+              <ul>
+                <li>사업자 등록번호: 602-99-85584</li>
+                <li>TEL: 031-903-8875</li>
+                <li>FAX: 031-903-8874</li>
+                <li>EMAIL: chiubon1@naver.com</li>
+              </ul>
+              <ul>
+                <li>Copyright(c) 치유본한의원. All Rights Reserved. 
+                  <a href="/admin"><img src="./jpg/adm.jpg" border="0"></a>
+                  <a href="http://www.thechakan.kr" target="_blank"><img src="./jpg/remote.jpg" border="0"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- NOTE: end of wrap-->
+</body>
+
+</html>
