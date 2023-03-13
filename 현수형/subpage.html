@@ -10,9 +10,10 @@
     <title>Document</title>
 
     <style>
-        #menu > li > span::after{display: block; content:''; border-bottom : solid 2px orange; transition : 250ms ease-in-out ;transform : scaleX(0);}
-        #menu > li > span:hover:after { transform: scaleX(1);}
-        #menu > li >span { display : inline-block; text-transform: uppercase}
+        #menu > li > a::after{display: block; content:''; border-bottom : solid 2px orange; transition : 250ms ease-in-out ;transform : scaleX(0);}
+        #menu > li > a:hover:after { transform: scaleX(1);}
+        #menu > li > a { display : inline-block; text-transform: uppercase}
+        a { text-decoration: none; color : black;}
     </style>
 </head>
 <body>
@@ -33,23 +34,23 @@
                 <br />
                 <ul id="menu">
                     <li>
-                        <span>시설 둘러보기</span>
+                        <a href = "https://www.naver.com">시설 둘러보기</a>
                         <ul style="left:-35px">
-                            <li>시설둘러보기</li>
-                            <li>공지사항</li>
-                            <li>질문과답변</li>
+                            <li><a href="">시설둘러보기</a></li>
+                            <li><a href="">공지사항</a></li>
+                            <li><a href="">질문과답변</a></li>
                         </ul>
                     </li>
-                    <li><span>해독클리닉</span></li>
-                    <li><span>통증클리닉</span></li>
+                    <li><a href = "https://www.naver.com">해독클리닉</a></li>
+                    <li><a href = "https://www.naver.com">통증클리닉</a></li>
                     <li>
-                        <span>자동차보험</span>
+                        <a href = "https://www.naver.com">자동차보험</a>
                     </li>
                     <li>
-                        <span>한의원소개</span>
+                        <a href = "https://www.naver.com">한의원소개</a>
                         <ul style="left:-45px">
                             <li style="color:orange;background-color:white">한의원소개</li>
-                            <li>오시는길</li>
+                            <li><a href="">오시는길<</a>/li>
                         </ul>
                     </li>
                 </ul>
@@ -81,11 +82,11 @@
                 <br /><b class="color-blue">진료시간</b><br /><br />
                 <table cellspacing="0" border="1" bordercolor="lightgray">
                     <tr>
-                        <td height="50px" width="30%" bgcolor="lightgray">평일</td>
+                        <td height="50px" width="30%">평일</td>
                         <td>오전9시~오후7시</td>
                     </tr>
                     <tr>
-                        <td height="70px" bgcolor="lightgray">토/일/공휴일</td>
+                        <td height="70px" >토/일/공휴일</td>
                         <td>오전9시~오후3시</td>
                     </tr>
                     <tr>
