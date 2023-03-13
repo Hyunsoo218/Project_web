@@ -1,6 +1,7 @@
 ﻿body {
     margin: 0 auto;
-    width: 800px;
+    width: 1000px;
+    position: relative;
 }
 li {
     list-style: none;
@@ -10,12 +11,12 @@ li {
     height: 200px;
 }
 #top-left {
-    width: 23%;
+    width: 18%;
     height:100%;
     float:left;
 }
 #top-right {
-    width: 76%;
+    width: 81%;
     height: 100%;
     float: right;
     position:relative;
@@ -31,8 +32,10 @@ li {
 #home {
     width:100%;
     height: 33%;
-    text-align: center;
-    font-family: "궁서체";
+}
+#home > img {
+    width:100%;
+    height: 60%;
 }
 #left-text {
     background-color: #194796;
@@ -49,15 +52,16 @@ li {
 #menu > li {
     float: right;
     height:40px;
-    padding: 5px 10px;
+    padding: 5px 30px;
     font-weight: bold;
     position:relative;
 }
 #menu > li > ul {
     position: absolute;
     top: 49px;
+
     text-align: center;
-    width: 100px;
+    width: 150px;
     display: none;
 }
 #menu > li:hover > ul {
@@ -93,15 +97,15 @@ li {
 
 #mid {
     margin-top:20px;
-    height:700px;
+    height:900px;
 }
 #mid-left {
-    width: 23%;
+    width: 18%;
     height: 100%;
     float: left;
 }
 #mid-right {
-    width: 74%;
+    width: 80%;
     height: 100%;
     float: right;
     margin: 0 auto;
@@ -176,8 +180,10 @@ li {
 }
 #mid-content-3 {
     border: 1px solid lightgray;
-    font-size:13px;
-    overflow:hidden;
+    width: 100%;
+    height: 450px;
+    font-size:14px;
+    position: relative;
 }
 #text {
     padding-left: 10px;
@@ -185,6 +191,7 @@ li {
     padding-bottom: 10px;
     float: left;
     width: 47%;
+    border
 }
 #text > a {
     text-indent: 10px;
@@ -198,12 +205,12 @@ li {
     height: 100px;
 }
 #bottom-left {
-    width: 23%;
+    width: 18%;
     height: 100%;
     float: left;
 }
 #bottom-right {
-    width: 76%;
+    width: 81%;
     height: 100%;
     float: right;
     font-size: 8px;
@@ -229,7 +236,7 @@ li {
     font-size:4px;
     background-color:white;
     height:18px;
-    border: 1px solid lightgray;
+    border: none;
 }
 #phoneimg > img {
     width: 40px; height: 40px;
