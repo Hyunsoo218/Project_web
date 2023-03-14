@@ -8,11 +8,8 @@
     <link href="../css/page_101.css" rel="stylesheet" type="text/css" />
 
     <title>Document</title>
-    <script>
-        function go(link){
-            alert(link + "로 이동!");
-            location.href = "../html/page_" + link+".html";
-        }
+    <script src="../js/link.js">
+
     </script>
     <style>
         #menu > li > a::after{display: block; content:''; border-bottom : solid 2px orange; transition : 250ms ease-in-out ;transform : scaleX(0);}
@@ -30,6 +27,26 @@
             height: 100%;
         }
         .move:hover{ cursor: pointer}
+        @keyframes fadein {
+            0% {
+                opacity: 0;
+                margin-top : -25px;
+            }
+            100% {
+                opacity: 100%;
+                margin-top : 0px;
+            }
+        }
+
+        @keyframes fadeout {
+            0%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -45,8 +62,8 @@
         </div>
         <div id="supbg">
             <div id="top-right">
-                <a>따뜻한 마음으로 치료하는</a>
-                <a>치유본한의원입니다.</a>
+                <a style = "animation : fadein 700ms 0s 1 linear alternate;">따뜻한 마음으로 치료하는</a>
+                <a id = "test" style ="opacity: 0; animation : fadein 700ms 700ms 1 linear alternate;">치유본한의원입니다.</a>
                 <br />
                 <ul id="menu">
                     <li>
