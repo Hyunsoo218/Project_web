@@ -15,6 +15,7 @@
         #menu > li > a::after{display: block; content:''; border-bottom : solid 2px orange; padding-bottom : 10px; transition : 250ms ease-in-out ;transform : scaleX(0);}
         #menu > li > a:hover:after { transform: scaleX(1);}
         #menu > li > a { display : inline-block; text-transform: uppercase}
+        #currentPage:after { display: block; content:''; border-bottom : solid 2px orange; padding-bottom : 0; transform : scaleX(1)!important;}
         a { text-decoration: none; color : black;}
         #menu > li > ul > li:hover > a { color: orange; }
         #mid-menu-1 > div:nth-child(1) > a { color: white; }
@@ -80,7 +81,7 @@
                         <a href = "../html/page_201.html">자동차보험</a>
                     </li>
                     <li>
-                        <a href = "../html/page_101.html">한의원소개</a>
+                        <a id = "currentPage" href = "../html/page_101.html">한의원소개</a>
                         <ul style="left:-45px">
                             <li class = "move" onclick = "go('101')" style="color:orange;background-color:white"><a style="color:orange">한의원소개</a></li>
                             <li class = "move" onclick = "go('102')"><a>오시는길</a></li>
