@@ -1,4 +1,10 @@
-$(function go(link){
+
+function go(link){
     alert(link + "로 이동!");
-    location.href = "page_" + link;
-})
+    location.href = "../html/page_" + link+".html";
+}
+onload = function(){
+    setInterval(function(){
+        document.getElementById("test").style.opacity = '1'
+    }, 1000)
+}
