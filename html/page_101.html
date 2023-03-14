@@ -8,7 +8,12 @@
     <link href="../css/page_101.css" rel="stylesheet" type="text/css" />
 
     <title>Document</title>
-
+    <script>
+        function go(link){
+            alert(link + "로 이동!");
+            location.href = "../html/page_" + link+".html";
+        }
+    </script>
     <style>
         #menu > li > a::after{display: block; content:''; border-bottom : solid 2px orange; transition : 250ms ease-in-out ;transform : scaleX(0);}
         #menu > li > a:hover:after { transform: scaleX(1);}
@@ -24,6 +29,7 @@
             width: 100%;
             height: 100%;
         }
+        .move:hover{ cursor: pointer}
     </style>
 </head>
 <body>
@@ -31,7 +37,7 @@
         <div id="top-left">
             <div id="home">
                 <br />
-                <img src="../image/mainlogo.png"></img>
+                <img class = "move" onclick = "go('main')" src="../image/mainlogo.png"></img>
             </div>
             <div id="left-text">
                 <h2>한의원소개</h2>
@@ -46,9 +52,9 @@
                     <li>
                         <a href = "../html/page_501.html">시설 둘러보기</a>
                         <ul style="left:-35px">
-                            <li><a href="../html/page_501.html">시설둘러보기</a></li>
-                            <li><a href="../html/page_502.html">공지사항</a></li>
-                            <li><a href="../html/page_503.html">질문과답변</a></li>
+                            <li class = "move" onclick = "go('501')"><a>시설둘러보기</a></li>
+                            <li class = "move" onclick = "go('502')"><a>공지사항</a></li>
+                            <li class = "move" onclick = "go('503')"><a>질문과답변</a></li>
                         </ul>
                     </li>
                     <li><a href = "../html/page_401.html">해독클리닉</a></li>
@@ -59,8 +65,8 @@
                     <li>
                         <a href = "../html/page_101.html">한의원소개</a>
                         <ul style="left:-45px">
-                            <li style="color:orange;background-color:white"><a style="color:orange" href="../html/page_101.html">한의원소개</a></li>
-                            <li><a href="../html/page_102.html">오시는길</a></li>
+                            <li class = "move" onclick = "go('101')" style="color:orange;background-color:white"><a style="color:orange">한의원소개</a></li>
+                            <li class = "move" onclick = "go('102')"><a>오시는길</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -72,7 +78,7 @@
         <div id="mid-left">
             <div id="mid-menu-1">
                 <div><a href = "../html/page_101.html">한의원소개</a></div>
-                <div><a href="../html/page_102.html">오시는길</a></div>
+                <div class = "move" onclick = "go('admin')"><a href="../html/page_102.html">오시는길</a></div>
             </div>
             <div id="mid-menu-2">
                 <div id="mid-menu-2inside">
@@ -178,7 +184,7 @@
     <div id="bottom">
         <div id="bottom-left">
             <br>
-            <img src="../image/mainlogo.png" style=" width: 90%; height: 35%;">
+            <img class = "move" onclick = "go('main')" src="../image/mainlogo.png" style=" width: 90%; height: 35%;">
         </div>
         <div id="bottom-right">
             <br />
@@ -193,8 +199,8 @@
                 상호 : 치유본한의원 대표자 : 채기원 주소 : 경기 고양시 일산동구 중앙로1261번길 61 (장항동) 8층 일부 , 9층<br />
                 사업자 등록번호 : 602-99-85584 TEL : 031-903-8875 FAX : 031-903-8874 EMAIL : chiubon1@naver.<br />
                 Copyright(c) 치유본한의원. All Rights Reserved.
-                <form action="../html/admin.html"><button><img src="../image/adminmode.jpg"></button></form>
-                <form action="https://www.thechakan.kr/"><button><img src="../image/thechkan.jpg"></button></form>
+                <form  action="page_admin.html"><button class = "move"><img src="../image/adminmode.jpg"></button></form>
+                <form  action="https://www.thechakan.kr/"><button class = "move"><img src="../image/thechkan.jpg"></button></form>
             </div>
         </div>
     </div>
