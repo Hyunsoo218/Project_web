@@ -8,6 +8,7 @@
     <link href="../css/page_201.css" rel="stylesheet" type="text/css" />
 
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="../js/link.js">
 
     </script>
@@ -128,10 +129,10 @@
             <hr />
             <div id="mid-content-2">
                 <ul>
-                    <li><div>자동차보험</div></li>
-                    <li><div>입원실 운영</div></li>
-                    <li><div>교통사고 후유증</div></li>
-                    <li><div>교통사고 후유증의 한방치료</div></li>
+                    <li><div id="but1" onclick="changPage_201(1)">자동차보험</div></li>
+                    <li><div id="but2" onclick="changPage_201(2)">입원실 운영</div></li>
+                    <li><div id="but3" onclick="changPage_201(3)">교통사고 후유증</div></li>
+                    <li><div id="but4" onclick="changPage_201(4)">교통사고 후유증의 한방치료</div></li>
                 </ul>
             </div>
             <div id="mid-content-3">
@@ -178,14 +179,74 @@
                             </table>
                         </div>
                     </div></li>
-                    <li><div id="con-2"> 2 
-
+                    <li><div id="con-2"> 
+                        <div style="position: relative;">
+                            <br>
+                            <p>
+                                &nbsp 365일 진료하는 치유본한의원 일산점은 환자분들의 후유증을 최소화하기 위해 맞춤진료하고 있습니다.<br>
+                                &nbsp 입원치료시 1일 2회 집중치료로 빠르게 일상생활로 복귀할 수 있도록 돕고 있으며 치료 중 받을 수 있는 스트레스 역시 최소화하기<br>
+                                &nbsp 위해 1 · 2인실 입원실을 운영하고 있습니다.
+                            </p>
+                            <div style="width: 25px;height: 25px; border-left: 1px solid blue;border-top: 1px solid blue; position: absolute; top:0; left:0;"></div>
+                            <div style="width: 25px;height: 25px; border-right: 1px solid blue;border-bottom: 1px solid blue; position: absolute; bottom:0; right:0;"></div>
+                        </div>
+                        <div>1인실 사진</div>
+                        <div>
+                            <br>
+                            <img src="../image/sub0201_02_img01.png">
+                            <img src="../image/sub0201_02_img02.png">
+                            <img src="../image/sub0201_02_img03.png">
+                        </div>
+                        <div>2인실 사진</div>
+                        <div>
+                            <br>
+                            <img src="../image/sub0201_02_img04.png">
+                            <img src="../image/sub0201_02_img05.jpg">
+                        </div>
                     </div></li>
-                    <li><div id="con-3"> 3 
-
+                    <li><div id="con-3"> 
+                        <div style="position: relative;">
+                            <br>
+                            <ol style="position: absolute; top: 20px; left: -20px;">
+                                <li>목이나 몸이 뻣뻣하고 쉽게 피로해 진다.</li>
+                                <li>신체에 무거운 느낌이 들며, 전신 무력감이 든다.</li>
+                                <li>통증의 양상이 쑤시거나 저리며, 감각이 둔해지고 냉감이 느껴진다.</li>
+                                <li>날씨가 흐리거나, 밤이 되면 통증이 더 심해진다.</li>
+                                <li>머리가 아프고 어지럽다.</li>
+                                <li>불안하며 정신집중이 잘 되지 않는다.</li>
+                                <li>수술 후부터 계속 몸이 좋지 않고 원상회복이 어려운 것 같다.</li>
+                                <li>발목을 삐거나 외상 타박 후에 회복이 느리다.</li>
+                                <li>사고 이후에 자고 나면 심하게 붓거나 부기가 잘 빠지지 않는다.</li>
+                                <li>속이 메스껍다.</li>
+                            </ol>
+                            <div style="width: 25px;height: 25px; border-left: 1px solid blue;border-top: 1px solid blue; position: absolute; top:0; left:0;"></div>
+                            <div style="width: 25px;height: 25px; border-right: 1px solid blue;border-bottom: 1px solid blue; position: absolute; bottom:0; right:0;"></div>
+                        </div>
+                        <div><img width="100%" height="100%" src="../image/sub0201_img03.png"></div>
                     </div></li>
-                    <li><div id="con-4"> 4 
-
+                    <li><div id="con-4"> 
+                        <div style="position: relative;">
+                            <br>
+                            <p>
+                                &nbsp 한방에서는 교통사고 후유증을 '낙상(落傷)','타박(打撲)','어혈(瘀血)' 등으로 분류하며, 치료는 어혈을 제거하면서 경락의 기혈순환을<br>
+                                &nbsp 촉진시켜 손상된 신체의 균형을 회복하는 것을 목적으로 합니다.
+                            </p>
+                            <div style="width: 25px;height: 25px; border-left: 1px solid blue;border-top: 1px solid blue; position: absolute; top:0; left:0;"></div>
+                            <div style="width: 25px;height: 25px; border-right: 1px solid blue;border-bottom: 1px solid blue; position: absolute; bottom:0; right:0;"></div>
+                        </div>
+                        <div id="con-4-mid">
+                            <div>
+                                <div>한약치료</div>
+                                <div>처음에는 어혈을 제거하고 기혈을 소통시키는 한약치료를<br>하며 나중에는 기혈을 보하는 한약치료로 인체 스스로<br>교통사고 후유증에서 벗어날 수 있도록 유도합니다.</div>
+                                <div>침구치료</div>
+                                <div>통증을 줄이고 기능회복을 위하여 경락을 소통시키는<br>치료입니다. 침치료는 통증이 급성적인 경우에 많이<br>사용하고 뜸치료는 만성화된 통증에 많이 사용합니다.</div>
+                                <div>정혈요법</div>
+                                <div>어혈을 물리적으로 제거함으로써 기혈소통이 원활히<br>이루어질 수 있도록 유도합니다.</div>
+                                <div>경락요법</div>
+                                <div>균형을 잃은 경락을 바로 잡아주어 교통사고의 충격으로<br>깨어진 신체의 생리적인 균형을 조절합니다.</div>
+                            </div>
+                            <div><img width="100%" height="100%" src="../image/sub0201_img04.png"></div>
+                        </div>
                     </div></li>
                 </ul>
             </div>
