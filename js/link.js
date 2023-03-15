@@ -1,6 +1,5 @@
 
 function go(link){
-    alert(link + "로 이동!");
     location.href = "../html/page_" + link+".html";
 }
 onload = function(){
@@ -9,8 +8,6 @@ onload = function(){
     }, 1000)
 }
 function changPage_201(num){
-    let but=null;
-
     for( let i = 1; i <= 4; i++ ){
         $("#but"+i).css("background-color","white");
         $("#but"+i).css("color","black");
