@@ -8,13 +8,48 @@
     <link href="../css/page_401.css" rel="stylesheet" type="text/css" />
 
     <title>Document</title>
+    <script src="../js/link.js">
+
+    </script>
+    <style>
+        #menu > li > a::after{display: block; content:''; border-bottom : solid 2px orange; padding-bottom : 10px; transition : 250ms ease-in-out ;transform : scaleX(0);}
+        #menu > li > a:hover:after { transform: scaleX(1);}
+        #menu > li > a { display : inline-block; text-transform: uppercase}
+        #currentPage:after { display: block; content:''; border-bottom : solid 2px orange; padding-bottom : 0; transform : scaleX(1)!important;}
+        a { text-decoration: none; color : black;}
+        #menu > li > ul > li:hover > a { color: orange; }
+        #mid-menu-1 > div:nth-child(2) > a { color: white; }
+        #mid-menu-1 > div:nth-child(1):hover > a { color: white; }
+        #bottom-right form {  display: inline; }
+        a {  width: 100%; height: 100%; }
+        .move:hover{ cursor: pointer }
+        @keyframes fadein {
+            0% {
+                opacity: 0;
+                margin-top : -25px;
+            }
+            100% {
+                opacity: 100%;
+                margin-top : 0px;
+            }
+        } 
+        @keyframes fadeout {
+            0%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+
+    </style>
 </head>
 <body>
     <div id="top">
         <div id="top-left">
             <div id="home">
                 <br />
-                <img src="../image/mainlogo.png"></img>
+                <img class = "move" onclick = "go('main')" src="../image/mainlogo.png"></img>
             </div>
             <div id="left-text">
                 <h2>한의원소개</h2>
@@ -22,26 +57,28 @@
         </div>
         <div id="supbg">
             <div id="top-right">
-                <a>따뜻한 마음으로 치료하는</a>
-                <a>치유본한의원입니다.</a>
+                <a style = "animation : fadein 700ms 0s 1 linear alternate;">따뜻한 마음으로 치료하는</a>
+                <a id = "test" style ="opacity: 0; animation : fadein 700ms 700ms 1 linear alternate;">치유본한의원입니다.</a>
                 <br />
                 <ul id="menu">
                     <li>
-                        시설 둘러보기
+                        <a href = "../html/page_501.html">시설 둘러보기</a>
                         <ul style="left:-35px">
-                            <li>시설둘러보기</li>
-                            <li>공지사항</li>
-                            <li>질문과답변</li>
+                            <li class = "move" onclick = "go('501')"><a>시설둘러보기</a></li>
+                            <li class = "move" onclick = "go('502')"><a>공지사항</a></li>
+                            <li class = "move" onclick = "go('503')"><a>질문과답변</a></li>
                         </ul>
                     </li>
-                    <li>해독클리닉</li>
-                    <li>통증클리닉</li>
-                    <li>자동차보험</li>
+                    <li><a  id = "currentPage" ;href = "../html/page_401.html">해독클리닉</a></li>
+                    <li><a  href = "../html/page_301.html">통증클리닉</a></li>
                     <li>
-                        한의원소개
+                        <a href = "../html/page_201.html">자동차보험</a>
+                    </li>
+                    <li>
+                        <a href = "../html/page_101.html">한의원소개</a>
                         <ul style="left:-45px">
-                            <li>한의원소개</li>
-                            <li>오시는길</li>
+                            <li class = "move" onclick = "go('101')"><a>한의원소개</a></li>
+                            <li class = "move" onclick = "go('102')"><a>오시는길</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -51,6 +88,8 @@
 
     <div id="mid">
         <div id="mid-left">
+            <div id="mid-menu-1">
+            </div>
             <div id="mid-menu-2">
                 <div id="mid-menu-2inside">
                     <span class="color-blue"><b>대표전화상담<br/></b></span> 
@@ -67,13 +106,13 @@
             </div>
             <div id="mid-menu-4">
                 <br /><b class="color-blue">진료시간</b><br /><br />
-                <table cellspacing="0" border="1" bordercolor="lightgray">
+                <table cellspacing="0" border="1" bordercolor="#ededed">
                     <tr>
-                        <td height="50px" width="30%" bgcolor="lightgray">평일</td>
+                        <td bgcolor="#f5f5f5" height="50px" width="30%">평일</td>
                         <td>오전9시~오후7시</td>
                     </tr>
                     <tr>
-                        <td height="70px" bgcolor="lightgray">토/일/공휴일</td>
+                        <td bgcolor="#f5f5f5" height="70px" >토/일/공휴일</td>
                         <td>오전9시~오후3시</td>
                     </tr>
                     <tr>
@@ -87,9 +126,8 @@
                 <br>
                 <h2><a style="text-decoration:overline">해</a>독클리닉</h2>
             </div>
-            <div id="mid-content-2">
-               <hr>
-            </div>
+            <hr />
+           
         </div>
     </div>
 
@@ -98,23 +136,23 @@
     <div id="bottom">
         <div id="bottom-left">
             <br>
-            <img src="../image/mainlogo.png" style=" width: 90%; height: 35%;">
+            <img class = "move" onclick = "go('main')" src="../image/mainlogo.png" style=" width: 90%; height: 35%;">
         </div>
         <div id="bottom-right">
             <br />
             <ul>
-                <li>한의원소개</li>
-                <li style="border-left: 1px solid black;">자동차보험</li>
-                <li style="border-left: 1px solid black;">해독클리닉</li>
-                <li style="border-left: 1px solid black;">문의사항</li>
+                <li><a href = "../html/page_101.html">한의원소개</a></li>
+                <li style="border-left: 1px solid black;"><a href = "../html/page_201.html">자동차보험</a></li>
+                <li style="border-left: 1px solid black;"><a href = "../html/page_401.html">해독클리닉</a></li>
+                <li style="border-left: 1px solid black;"><a href = "../html/page_503.html">문의사항</a></li>
             </ul>
             <br />
             <div>
                 상호 : 치유본한의원 대표자 : 채기원 주소 : 경기 고양시 일산동구 중앙로1261번길 61 (장항동) 8층 일부 , 9층<br />
                 사업자 등록번호 : 602-99-85584 TEL : 031-903-8875 FAX : 031-903-8874 EMAIL : chiubon1@naver.<br />
                 Copyright(c) 치유본한의원. All Rights Reserved.
-                <button><img src="../image/adminmode.jpg"></button>
-                <button><img src="../image/thechkan.jpg"></button>
+                <form  action="page_admin.html"><button class = "move"><img src="../image/adminmode.jpg"></button></form>
+                <form  action="https://www.thechakan.kr/"><button class = "move"><img src="../image/thechkan.jpg"></button></form>
             </div>
         </div>
     </div>
