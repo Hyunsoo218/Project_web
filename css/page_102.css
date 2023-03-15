@@ -115,6 +115,7 @@ li {
 #mid-menu-1 > div:nth-child(2) {
     background-color: gray;
     color: white;
+    margin-top: 5px;
 }
 #mid-menu-1 > div:nth-child(1) {
     background-color: lightgray;
