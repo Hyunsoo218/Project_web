@@ -142,7 +142,7 @@ div#toptitle {
     display: flex;
     padding-left: 60px;
 }
-#Mb-wrap>ul>li {
+#Mb-wrap>ul>li:not(:first-child) {
     margin: 5 20;
     border: 1px solid #ddd;
     height: 320px;
@@ -150,6 +150,10 @@ div#toptitle {
 #Mb-box {
     width: 380px;
     padding: 0 10px;
+}
+#Mb-box > #contentrightdiv {
+    border: 1px solid #ddd;
+    height: 283px;
 }
 #title {
     margin: 10 0 0 10px;
@@ -182,7 +186,6 @@ div#toptitle {
     min-width: 90px;
     text-align: center;
 }
-
 
 
 

@@ -40,7 +40,17 @@ $.fn.toggleSub = function($target, complete)
 			}
 		});
 	}
-$('.toggle_wrap > .title_wrap').toggleSub('.text_wrap');
 
-
-document.querySelector("#gotop")
+	$(function(){
+		//alert("jQuery init");
+		$('#tabs > span').click(function () {
+			$('.contentmenu').css('background-color', 'white');
+			$(this).css('background-color', 'white');
+			var divname = $(this).attr('id');
+			//alert(divname);
+			$('.contentmenudiv').hide();
+			$('#' + divname + 'div').show();
+		});
+	});
+	
+	
