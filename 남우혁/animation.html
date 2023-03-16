@@ -52,9 +52,9 @@
     </div>
 </div>
 <script>
-    var btn = document.getElementById("btn")
-    var Input = document.getElementById("myInput")
-    btn.addEventListener("mouseover" , main)
+    var btn = document.getElementById("btn") // 아이디가 btn인걸 찾아서 btn 함수에 저장
+    var Input = document.getElementById("myInput") // 아이디가 myInput인걸 찾아서 Input 함수에 저장
+    btn.addEventListener("mouseover" , main) // btn에 mouseover이벤트 발생시 main함수를 발생하게끔 저장
     setInterval(() => {
         btn.style.pointerEvents = "painted"
     }, 500);

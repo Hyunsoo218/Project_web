@@ -5,16 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="../css/page_301.css" rel="stylesheet" type="text/css" />
+    <link href="../css/page_201.css" rel="stylesheet" type="text/css" />
 
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../js/link.js">
+
+    </script>
+    <style>
+        #menu > li > a::after{display: block; content:''; border-bottom : solid 2px orange; padding-bottom : 10px; transition : 250ms ease-in-out ;transform : scaleX(0);}
+        #menu > li > a:hover:after { transform: scaleX(1);}
+        #menu > li > a { display : inline-block; text-transform: uppercase}
+        #currentPage:after { display: block; content:''; border-bottom : solid 2px orange; padding-bottom : 0; transform : scaleX(1)!important;}
+        a { text-decoration: none; color : black;}
+        #menu > li > ul > li:hover > a { color: orange; }
+        #mid-menu-1 > div:nth-child(2) > a { color: white; }
+        #mid-menu-1 > div:nth-child(1):hover > a { color: white; }
+        #bottom-right form {  display: inline; }
+        a {  width: 100%; height: 100%; }
+        .move:hover{ cursor: pointer }
+        @keyframes fadein {
+            0% {
+                opacity: 0;
+                margin-top : -25px;
+            }
+            100% {
+                opacity: 100%;
+                margin-top : 0px;
+            }
+        } 
+        @keyframes fadeout {
+            0%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="top">
         <div id="top-left">
             <div id="home">
                 <br />
-                <img src="../image/mainlogo.png"></img>
+                <img class = "move" onclick = "go('main')" src="../image/mainlogo.png"></img>
             </div>
             <div id="left-text">
                 <h2>한의원소개</h2>
@@ -22,26 +57,28 @@
         </div>
         <div id="supbg">
             <div id="top-right">
-                <a>따뜻한 마음으로 치료하는</a>
-                <a>치유본한의원입니다.</a>
+                <a style = "animation : fadein 700ms 0s 1 linear alternate;">따뜻한 마음으로 치료하는</a>
+                <a id = "test" style ="opacity: 0; animation : fadein 700ms 700ms 1 linear alternate;">치유본한의원입니다.</a>
                 <br />
                 <ul id="menu">
                     <li>
-                        시설 둘러보기
+                        <a href = "../html/page_501.html">시설 둘러보기</a>
                         <ul style="left:-35px">
-                            <li>시설둘러보기</li>
-                            <li>공지사항</li>
-                            <li>질문과답변</li>
+                            <li class = "move" onclick = "go('501')"><a>시설둘러보기</a></li>
+                            <li class = "move" onclick = "go('502')"><a>공지사항</a></li>
+                            <li class = "move" onclick = "go('503')"><a>질문과답변</a></li>
                         </ul>
                     </li>
-                    <li>해독클리닉</li>
-                    <li>통증클리닉</li>
-                    <li>자동차보험</li>
+                    <li><a href = "../html/page_401.html">해독클리닉</a></li>
+                    <li><a href = "../html/page_301.html">통증클리닉</a></li>
                     <li>
-                        한의원소개
+                        <a href = "../html/page_201.html" id = "currentPage">자동차보험</a>
+                    </li>
+                    <li>
+                        <a href = "../html/page_101.html">한의원소개</a>
                         <ul style="left:-45px">
-                            <li>한의원소개</li>
-                            <li>오시는길</li>
+                            <li class = "move" onclick = "go('101')"><a>한의원소개</a></li>
+                            <li class = "move" onclick = "go('102')"><a>오시는길</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -51,6 +88,8 @@
 
     <div id="mid">
         <div id="mid-left">
+            <div id="mid-menu-1">
+            </div>
             <div id="mid-menu-2">
                 <div id="mid-menu-2inside">
                     <span class="color-blue"><b>대표전화상담<br/></b></span> 
@@ -67,13 +106,13 @@
             </div>
             <div id="mid-menu-4">
                 <br /><b class="color-blue">진료시간</b><br /><br />
-                <table cellspacing="0" border="1" bordercolor="lightgray">
+                <table cellspacing="0" border="1" bordercolor="#ededed">
                     <tr>
-                        <td height="50px" width="30%" bgcolor="lightgray">평일</td>
+                        <td bgcolor="#f5f5f5" height="50px" width="30%">평일</td>
                         <td>오전9시~오후7시</td>
                     </tr>
                     <tr>
-                        <td height="70px" bgcolor="lightgray">토/일/공휴일</td>
+                        <td bgcolor="#f5f5f5" height="70px" >토/일/공휴일</td>
                         <td>오전9시~오후3시</td>
                     </tr>
                     <tr>
@@ -87,8 +126,129 @@
                 <br>
                 <h2><a style="text-decoration:overline">자</a>동차보험</h2>
             </div>
+            <hr />
             <div id="mid-content-2">
-               <hr>
+                <ul>
+                    <li><div id="but1" onclick="changPage_201(1)">자동차보험</div></li>
+                    <li><div id="but2" onclick="changPage_201(2)">입원실 운영</div></li>
+                    <li><div id="but3" onclick="changPage_201(3)">교통사고 후유증</div></li>
+                    <li><div id="but4" onclick="changPage_201(4)">교통사고 후유증의 한방치료</div></li>
+                </ul>
+            </div>
+            <div id="mid-content-3">
+                <ul>
+                    <li><div id="con-1"> 
+                        <div style="position: relative;">
+                            <br>
+                            <p>
+                                &nbsp 교통사고! 한방치료도 보험혜택이!<br>
+                                &nbsp 한의원에서도 자동차보험이 적용된다는 사실을<br>
+                                &nbsp 아직도 모르셨다구요??<br>
+                                &nbsp <span class="color-blue font-size-up font-bold">자동차 보험! 한방치료에도 적용됩니다.</span><br><br>
+                            </p>
+                            <p>
+                                &nbsp 교통사고는 흔히 일반 정형외과나 외과적으로만 보험적용이 되는<br>
+                                &nbsp 것으로 인식되어 있으나 <span class="color-blue">침이나 뜸, 부항, 추나요법까지 다양한<br>
+                                &nbsp 한방치료</span>도 폭 넓게 적용되고 있습니다.
+                            </p>
+                            <div style="width: 25px;height: 25px; border-left: 1px solid blue;border-top: 1px solid blue; position: absolute; top:0; left:0;"></div>
+                            <div style="width: 25px;height: 25px; border-right: 1px solid blue;border-bottom: 1px solid blue; position: absolute; bottom:0; right:0;"></div>
+                        </div>
+                        <div>
+                            <img width="100%" height="100%" src="../image/sub0201_img1.jpg">
+                        </div>
+                        <div>
+                            <img width="100%" height="100%" src="../image/sub0201_img2.jpg">
+                        </div>
+                        <div>
+                            <table cellspacing="0" border="1" bordercolor="white">
+                                <tr>
+                                    <td bgcolor="#a9def9" height="50px" width="20%">치료범위</td>
+                                    <td bgcolor="#ededed" width="480px" style="text-align: left;">&nbsp 교통사고 후 근육통, 염죄(경추부 염좌, 요추부 염좌, 견관절 염좌 <br>
+                                        &nbsp 및 다발성 염좌), 경추 및 요추의 디스크, 두통 등의 증상</td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#a9def9" height="50px" >적용대상</td>
+                                    <td bgcolor="#ededed" style="text-align: left;">&nbsp 첩약(한약)을 포함한 침, 뜸, 부항, 추나요법, 한방물리요법 일체</td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#a9def9" height="50px" >보험처리</td>
+                                    <td bgcolor="#ededed" style="text-align: left;">&nbsp 사건접수번호와 전화번호만 말씀해주시면 한의원과 자동차<br>
+                                        &nbsp 보험에서 알아서 처리합니다.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div></li>
+                    <li><div id="con-2"> 
+                        <div style="position: relative;">
+                            <br>
+                            <p>
+                                &nbsp 365일 진료하는 치유본한의원 일산점은 환자분들의 후유증을 최소화하기 위해 맞춤진료하고 있습니다.<br>
+                                &nbsp 입원치료시 1일 2회 집중치료로 빠르게 일상생활로 복귀할 수 있도록 돕고 있으며 치료 중 받을 수 있는 스트레스 역시 최소화하기<br>
+                                &nbsp 위해 1 · 2인실 입원실을 운영하고 있습니다.
+                            </p>
+                            <div style="width: 25px;height: 25px; border-left: 1px solid blue;border-top: 1px solid blue; position: absolute; top:0; left:0;"></div>
+                            <div style="width: 25px;height: 25px; border-right: 1px solid blue;border-bottom: 1px solid blue; position: absolute; bottom:0; right:0;"></div>
+                        </div>
+                        <div>1인실 사진</div>
+                        <div>
+                            <br>
+                            <img src="../image/sub0201_02_img01.png">
+                            <img src="../image/sub0201_02_img02.png">
+                            <img src="../image/sub0201_02_img03.png">
+                        </div>
+                        <div>2인실 사진</div>
+                        <div>
+                            <br>
+                            <img src="../image/sub0201_02_img04.png">
+                            <img src="../image/sub0201_02_img05.jpg">
+                        </div>
+                    </div></li>
+                    <li><div id="con-3"> 
+                        <div style="position: relative;">
+                            <br>
+                            <ol style="position: absolute; top: 20px; left: -20px;">
+                                <li>목이나 몸이 뻣뻣하고 쉽게 피로해 진다.</li>
+                                <li>신체에 무거운 느낌이 들며, 전신 무력감이 든다.</li>
+                                <li>통증의 양상이 쑤시거나 저리며, 감각이 둔해지고 냉감이 느껴진다.</li>
+                                <li>날씨가 흐리거나, 밤이 되면 통증이 더 심해진다.</li>
+                                <li>머리가 아프고 어지럽다.</li>
+                                <li>불안하며 정신집중이 잘 되지 않는다.</li>
+                                <li>수술 후부터 계속 몸이 좋지 않고 원상회복이 어려운 것 같다.</li>
+                                <li>발목을 삐거나 외상 타박 후에 회복이 느리다.</li>
+                                <li>사고 이후에 자고 나면 심하게 붓거나 부기가 잘 빠지지 않는다.</li>
+                                <li>속이 메스껍다.</li>
+                            </ol>
+                            <div style="width: 25px;height: 25px; border-left: 1px solid blue;border-top: 1px solid blue; position: absolute; top:0; left:0;"></div>
+                            <div style="width: 25px;height: 25px; border-right: 1px solid blue;border-bottom: 1px solid blue; position: absolute; bottom:0; right:0;"></div>
+                        </div>
+                        <div><img width="100%" height="100%" src="../image/sub0201_img03.png"></div>
+                    </div></li>
+                    <li><div id="con-4"> 
+                        <div style="position: relative;">
+                            <br>
+                            <p>
+                                &nbsp 한방에서는 교통사고 후유증을 '낙상(落傷)','타박(打撲)','어혈(瘀血)' 등으로 분류하며, 치료는 어혈을 제거하면서 경락의 기혈순환을<br>
+                                &nbsp 촉진시켜 손상된 신체의 균형을 회복하는 것을 목적으로 합니다.
+                            </p>
+                            <div style="width: 25px;height: 25px; border-left: 1px solid blue;border-top: 1px solid blue; position: absolute; top:0; left:0;"></div>
+                            <div style="width: 25px;height: 25px; border-right: 1px solid blue;border-bottom: 1px solid blue; position: absolute; bottom:0; right:0;"></div>
+                        </div>
+                        <div id="con-4-mid">
+                            <div>
+                                <div>한약치료</div>
+                                <div>처음에는 어혈을 제거하고 기혈을 소통시키는 한약치료를<br>하며 나중에는 기혈을 보하는 한약치료로 인체 스스로<br>교통사고 후유증에서 벗어날 수 있도록 유도합니다.</div>
+                                <div>침구치료</div>
+                                <div>통증을 줄이고 기능회복을 위하여 경락을 소통시키는<br>치료입니다. 침치료는 통증이 급성적인 경우에 많이<br>사용하고 뜸치료는 만성화된 통증에 많이 사용합니다.</div>
+                                <div>정혈요법</div>
+                                <div>어혈을 물리적으로 제거함으로써 기혈소통이 원활히<br>이루어질 수 있도록 유도합니다.</div>
+                                <div>경락요법</div>
+                                <div>균형을 잃은 경락을 바로 잡아주어 교통사고의 충격으로<br>깨어진 신체의 생리적인 균형을 조절합니다.</div>
+                            </div>
+                            <div><img width="100%" height="100%" src="../image/sub0201_img04.png"></div>
+                        </div>
+                    </div></li>
+                </ul>
             </div>
         </div>
     </div>
@@ -98,23 +258,23 @@
     <div id="bottom">
         <div id="bottom-left">
             <br>
-            <img src="../image/mainlogo.png" style=" width: 90%; height: 35%;">
+            <img class = "move" onclick = "go('main')" src="../image/mainlogo.png" style=" width: 90%; height: 35%;">
         </div>
         <div id="bottom-right">
             <br />
             <ul>
-                <li>한의원소개</li>
-                <li style="border-left: 1px solid black;">자동차보험</li>
-                <li style="border-left: 1px solid black;">해독클리닉</li>
-                <li style="border-left: 1px solid black;">문의사항</li>
+                <li><a href = "../html/page_101.html">한의원소개</a></li>
+                <li style="border-left: 1px solid black;"><a href = "../html/page_201.html">자동차보험</a></li>
+                <li style="border-left: 1px solid black;"><a href = "../html/page_401.html">해독클리닉</a></li>
+                <li style="border-left: 1px solid black;"><a href = "../html/page_503.html">문의사항</a></li>
             </ul>
             <br />
             <div>
                 상호 : 치유본한의원 대표자 : 채기원 주소 : 경기 고양시 일산동구 중앙로1261번길 61 (장항동) 8층 일부 , 9층<br />
                 사업자 등록번호 : 602-99-85584 TEL : 031-903-8875 FAX : 031-903-8874 EMAIL : chiubon1@naver.<br />
                 Copyright(c) 치유본한의원. All Rights Reserved.
-                <button><img src="../image/adminmode.jpg"></button>
-                <button><img src="../image/thechkan.jpg"></button>
+                <form  action="page_admin.html"><button class = "move"><img src="../image/adminmode.jpg"></button></form>
+                <form  action="https://www.thechakan.kr/"><button class = "move"><img src="../image/thechkan.jpg"></button></form>
             </div>
         </div>
     </div>
