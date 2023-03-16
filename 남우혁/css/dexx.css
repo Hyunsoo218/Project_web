@@ -1,5 +1,5 @@
 /* * {
-    margin: 0 auto;
+    margin: px0 auto;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
@@ -17,6 +17,7 @@ a {
 }
 #wrapmaster {
     margin: 0 auto;
+    width: 1400px;
 }
 #topmenudiv {
     position: relative;
@@ -131,7 +132,7 @@ div#toptitle {
 
 
 #Mb-menu {
-    /* border: 1px solid yellow; */
+    margin: 0 auto;
     width: 100%;
 }
 #Mb-wrap {
@@ -150,10 +151,15 @@ div#toptitle {
 #Mb-box {
     width: 380px;
     padding: 0 10px;
+    position: relative;
 }
 #Mb-box > #contentrightdiv {
     border: 1px solid #ddd;
+    background-color: white;
+    width: 100%;
     height: 283px;
+    position: absolute;
+    top: 48px;
 }
 #title {
     margin: 10 0 0 10px;
@@ -186,7 +192,55 @@ div#toptitle {
     min-width: 90px;
     text-align: center;
 }
+#tabs {
+    font-weight: 600;
+}
+#tabs > span {
+    display: inline-block;
+    color: #777;
+    font-size: 15px;
+position: absolute;
+    border-top: 0.5px solid #777;
+    border-left: 0.5px solid #777;
+    border-right: 0.5px solid #777;
 
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px 5px 0 0;
+}
+#tabs > span:nth-child(1) {
+    z-index: 1;
+}
+#tabs > span:nth-child(2) {
+    z-index: -1;
+    left: 160px;
+}
+#contentrightdiv{
+    z-index: 0;
+}
+
+
+
+#tabs > span > a {
+    color: black;
+    margin-left: 10px;
+}
+
+#gonjidiv > a {
+    color: #777;
+}
+#gonjidiv > dl {
+    position: relative;
+    margin: 0;
+    padding-right: 80px;
+}
+#gonjidiv > dl > dt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
 
 #footerdiv {

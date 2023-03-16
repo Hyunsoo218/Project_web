@@ -43,14 +43,18 @@ $.fn.toggleSub = function($target, complete)
 
 	$(function(){
 		//alert("jQuery init");
+
 		$('#tabs > span').click(function () {
 			$('.contentmenu').css('background-color', 'white');
-			$(this).css('background-color', 'white');
+			$("#tabs > span").css('z-index', '0');
+			$(this).css('z-index', '1');
 			var divname = $(this).attr('id');
 			//alert(divname);
 			$('.contentmenudiv').hide();
 			$('#' + divname + 'div').show();
 		});
+
+		$("#gonji").click();
 	});
 	
 	
