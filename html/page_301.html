@@ -8,7 +8,7 @@
     <link href="../css/page_301.css" rel="stylesheet" type="text/css" />
     <style>
         #subTitle { padding-bottom : 42px; border-bottom : 1px solid sandybrown; position : relative;}
-        #subTitle::before { position : absolute; top : -5px; width : 40px; height : 2px; background-color : #2569b2; content : '';}
+        #subTitle::before { position : absolute; top : -5px; width : 30px; height : 2px; background-color : #2569b2; content : '';}
         #midImg {
             position: absolute;
             bottom: 0;
@@ -18,9 +18,28 @@
             padding: 18px 40px;
             background: #fff;
             color: #2569b2;}
+
         #mid-content-3_top { position : relative; border : 1px solid black; }
-        #mid-content-3_bottom > ul > li {padding-bottom: 12px; }
-        #mid-content-3_bottom > ul > li::marker {content : ''; width : 10px; height : 10px; margin-right : 10px; border-radius: 50%; display: inline-block; border : 3px solid cornflowerblue;}
+        #mid-content-3_bottom { display : flex; margin-top : 15px; justify-content: space-between; align-items: center;}
+        #mid-content-3_bottom > ul > li {padding-bottom: 12px; font-weight: normal; }
+        #mid-content-3_bottom > ul > li::before {
+            content : '';
+            width : 10px;
+            height : 10px;
+            margin-right : 10px;
+            top : -10px;
+            border-radius: 50%;
+            display: inline-block;
+            border : 3px solid cornflowerblue;
+            box-sizing : border-box;
+            }
+        .mid-content-3_subtitle { list-style: decimal; font-weight: bold; }
+        .mid-content-3_subtitle::marker {
+            font-size: 22px;
+            color: #2569b2;
+            font-weight: 600;
+        }
+
     </style>
     <title>Document</title>
 </head>
@@ -29,7 +48,7 @@
         <div id="top-left">
             <div id="home">
                 <br />
-                <img src="../image/mainlogo.png"></img>
+                <img class = "move" onclick = "go('main')" src="../image/mainlogo.png"></img>
             </div>
             <div id="left-text">
                 <h2>한의원소개</h2>
@@ -37,26 +56,28 @@
         </div>
         <div id="supbg">
             <div id="top-right">
-                <a>따뜻한 마음으로 치료하는</a>
-                <a>치유본한의원입니다.</a>
+                <a style = "animation : fadein 700ms 0s 1 linear alternate;">따뜻한 마음으로 치료하는</a>
+                <a id = "test" style ="opacity: 0; animation : fadein 700ms 700ms 1 linear alternate;">치유본한의원입니다.</a>
                 <br />
                 <ul id="menu">
                     <li>
-                        시설 둘러보기
+                        <a href = "../html/page_501.html">시설 둘러보기</a>
                         <ul style="left:-35px">
-                            <li>시설둘러보기</li>
-                            <li>공지사항</li>
-                            <li>질문과답변</li>
+                            <li class = "move" onclick = "go('501')"><a>시설둘러보기</a></li>
+                            <li class = "move" onclick = "go('502')"><a>공지사항</a></li>
+                            <li class = "move" onclick = "go('503')"><a>질문과답변</a></li>
                         </ul>
                     </li>
-                    <li>해독클리닉</li>
-                    <li>통증클리닉</li>
-                    <li>자동차보험</li>
+                    <li><a href = "../html/page_401.html">해독클리닉</a></li>
+                    <li><a href = "../html/page_301.html" id = "currentPage">통증클리닉</a></li>
                     <li>
-                        한의원소개
+                        <a href = "../html/page_201.html">자동차보험</a>
+                    </li>
+                    <li>
+                        <a href = "../html/page_101.html">한의원소개</a>
                         <ul style="left:-45px">
-                            <li>한의원소개</li>
-                            <li>오시는길</li>
+                            <li class = "move" onclick = "go('101')"><a>한의원소개</a></li>
+                            <li class = "move" onclick = "go('102')"><a>오시는길</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -112,15 +133,15 @@
             </div>
             <div id = mid-content-3>
                 <ol id = mid-content-3_top>
-                    <li>
+                    <li class = "mid-content-3_subtitle">
                         <span>원인</span></br>
-                        <p>통증은 인체 조직에 물리적 자극 또는 화학적 자극이 작용하여 체성 중추신경계에 전달됨으로써 통각중추의 반응이 고통으로 나타나는 현상이며 한의학적으로는 기혈의 순환장애로 인한 담음, 어혈, 기체가 생길 때 발생합니다.
-                            </br></br>생활환경의 오염과 복잡함으로 스트레스에 의한 통증, 교통사고와 산업현잔에서의 안전사고 등은 대개 동통을 남기게 됩니다. 한편, 평균수명의 연장으로 노년층인구가 늘어남에 따라 만성 퇴행성질환이 증가하여 여러 가지 골관절 질환을 수반합니다.</p>
+                        <p style="font-weight: normal">통증은 인체 조직에 물리적 자극 또는 화학적 자극이 작용하여 체성 중추신경계에 전달됨으로써 통각중추의 반응이 고통으로 나타나는 현상이며 한의학적으로는 기혈의 순환장애로 인한 담음, 어혈, 기체가 생길 때 발생합니다.
+                            </br></br>생활환경의 오염과 복잡함으로 스트레스에 의한 통증, 교통고와 산업현잔에서의 안전사고 등은 대개 동통을 남기게 됩니다. 한편, 평균수명의 연장으로 노년층인구가 늘어남에 따라 만성 퇴행성질환이 증가하여 여러 가지 골관절 질환을 수반합니다.</p>
                     </li>
-                    <li style = "margin-top : 40px;">
+                    <li style = "margin-top : 40px;" class = "mid-content-3_subtitle">
                         <span>통증치료에서 다루는 질환</span></br>
-                        <div id = mid-content-3_bottom style = "margin-top : 15px;">
-                            <ul>
+                        <div id = "mid-content-3_bottom" >
+                            <ul style = "padding : 0;">
                                 <li><strong>전신 질환 :</strong> 전신 관절염</li>
                                 <li><strong>두부 질환 :</strong> 두통, 편두통, 외상성 두통</li>
                                 <li><strong>안면부 질환 :</strong> 구안와사, 안면 신경</li>
@@ -131,6 +152,9 @@
                                 <li><strong>소화기계 질환 :</strong> 과민성 대장증후군, 소화성궤양</li>
                                 <li><strong>순환기계 질환 :</strong> 심통, 협통</li>
                             </ul>
+                            <figure>
+                                <img src="../image/301_02.png" alt="" style = "max-width: 100%; height : 300px; ">
+                            </figure>
                         </div>
                     </li>
                 </ol>
