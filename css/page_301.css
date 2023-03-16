@@ -1,6 +1,6 @@
 ﻿body {
     margin: 0 auto;
-    width: 1000px;
+    width: 1200px;
     position: relative;
 }
 li {
@@ -90,7 +90,8 @@ li {
 
 #mid {
     margin-top:20px;
-    height:900px;
+    width : 100%;
+    height : 1200px;
 }
 #mid-left {
     width: 18%;
@@ -168,7 +169,6 @@ li {
 
 }
 #mid-content-2 {
-    height: 200px;
     text-align: center;
     border: 1px solid white;
 }
@@ -179,13 +179,7 @@ li {
     width: 40px;
     /* 쌍따옴표 사진 */
 }
-#mid-content-3 {
-    border: 1px solid lightgray;
-    width: 100%;
-    height: 450px;
-    font-size:14px;
-    position: relative;
-}
+
 #text {
     padding-left: 10px;
     padding-top: 10px;
