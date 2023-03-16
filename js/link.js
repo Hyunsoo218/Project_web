@@ -9,7 +9,7 @@ window.onload = function(){
 
     const slides = $('#Slider-1'); //전체 슬라이드 컨테이너
     const slideImg = $('#Slider-1 article'); //모든 슬라이드들
-    let currentIdx = 0; //현재 슬라이드 index
+    let currentIdx = 1; //현재 슬라이드 index
     const slideCount = slideImg.length; // 슬라이드 개수
     const prev = $('#l-but'); //이전 버튼
     const next = $('#2-but'); //다음 버튼
@@ -17,16 +17,34 @@ window.onload = function(){
 
     //전체 슬라이드 컨테이너 넓이 설정
     $('#Slider-1').css("width",(slideWidth  * slideCount) + 'px');
+    $('#Slider-1').css("left",(-currentIdx * slideWidth) + 'px');
 
     $('#l-but').click(function(){
-        if(currentIdx - 1 < 0)  currentIdx = slideCount - 1;
-        else                    currentIdx--; 
+        if(currentIdx - 1 < 1)  {
+            setTimeout(function(){
+                $('#Slider-1').css("transition","left 0s ease-out");
+                currentIdx = slideCount - 2;
+                $('#Slider-1').css("left",(-currentIdx * slideWidth) + 'px');
+            } ,200);
+        }
+
+        currentIdx--; 
+        $('#Slider-1').css("transition","left 0.2s ease-out");
         $('#Slider-1').css("left",(-currentIdx * slideWidth) + 'px');
+                       
     });
 
     $('#2-but').click(function(){
-        if(currentIdx + 1 == slideCount) currentIdx = 0;
-        else                             currentIdx++; 
+        if(currentIdx + 1 >= slideCount - 1) {
+            setTimeout(function(){
+                $('#Slider-1').css("transition","left 0s ease-out");
+                currentIdx = 1;
+                $('#Slider-1').css("left",(-currentIdx * slideWidth) + 'px');
+            } ,200);
+        }
+        
+        currentIdx++; 
+        $('#Slider-1').css("transition","left 0.2s ease-out");
         $('#Slider-1').css("left",(-currentIdx * slideWidth) + 'px');
     });
 }
