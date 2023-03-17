@@ -45,11 +45,11 @@ window.onload = function(){
         $('#Slider-1').css("left",(-currentIdx * 800) + 'px'); 
 
         $('#Slider-2').css("transition","left 0.2s ease-out");
-        $('#Slider-2').css("left", '-160px');
+        $('#Slider-2').css("left", '-185px');
 
         setTimeout(function(){
             $('#Slider-2').css("transition","left 0s ease-out");
-            $('#Slider-2').css("left", '-320px');
+            $('#Slider-2').css("left", '-345px');
             setSubSlider();
         } ,200);
     });
@@ -66,11 +66,11 @@ window.onload = function(){
         $('#Slider-1').css("left",(-currentIdx * 800) + 'px');
 
         $('#Slider-2').css("transition","left 0.2s ease-out");
-        $('#Slider-2').css("left", '-480px');
+        $('#Slider-2').css("left", '-505px');
 
         setTimeout(function(){
             $('#Slider-2').css("transition","left 0s ease-out");
-            $('#Slider-2').css("left", '-320px');
+            $('#Slider-2').css("left", '-345px');
             setSubSlider();
         } ,200);
     });
@@ -86,11 +86,11 @@ window.onload = function(){
         $('#Slider-1').css("left",(-currentIdx * 800) + 'px'); 
 
         $('#Slider-2').css("transition","left 0.2s ease-out");
-        $('#Slider-2').css("left", '0');
+        $('#Slider-2').css("left", '-25px');
 
         setTimeout(function(){
             $('#Slider-2').css("transition","left 0s ease-out");
-            $('#Slider-2').css("left", '-320px');
+            $('#Slider-2').css("left", '-345px');
             setSubSlider();
 
             if(currentIdx == 0)  {
@@ -114,11 +114,11 @@ window.onload = function(){
         $('#Slider-1').css("left",(-currentIdx * 800) + 'px');
 
         $('#Slider-2').css("transition","left 0.2s ease-out");
-        $('#Slider-2').css("left", '-640px');
+        $('#Slider-2').css("left", '-665px');
 
         setTimeout(function(){
             $('#Slider-2').css("transition","left 0s ease-out");
-            $('#Slider-2').css("left", '-320px');
+            $('#Slider-2').css("left", '-345px');
             setSubSlider();
 
             if(currentIdx == 29){
@@ -155,6 +155,14 @@ function changPage_201(num){
         case 4: he = 800; break;
     }
     $("#mid").css("height", "" + he + "px");
+}
+function searchBtClick(){
+    if(document.getElementById("SearchForm").style.display == "block"){
+        document.getElementById("SearchForm").style.display = "none";
+    }
+    else{
+        document.getElementById("SearchForm").style.display = "block";
+    }
 }
 
 

@@ -90,7 +90,7 @@ li {
 
 #mid {
     margin-top:20px;
-    height:900px;
+    height:700px;
 }
 #mid-left {
     width: 18%;
@@ -224,14 +224,13 @@ li {
     width: 800px;
     height: 80px;
     position: relative;
-    background-color: black;
     overflow: hidden;
 }
 #Slider-2{
     position: absolute !important;
     transition: left 0.2s ease-out; 
     width: 4160px; /*  가변  */
-    left: -320px;  /*  가변  */
+    left: -345px;  /*  가변  */
 }
 #Slider-2 > div:nth-child(1) > article {
     float: left !important;
