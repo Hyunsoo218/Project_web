@@ -70,12 +70,61 @@ div#toptitle {
     display: block;
 }
 
+#left , #right{
+    color: #333;
+    z-index: 3;
+    position: absolute;
+    top: 275px;
+    font-size: 30px;
+    cursor: pointer;
+    opacity: 0.3;
+}
+#left{
+    left: 140px;
+}
+#right{
+    right: 140px;
+}
+#left:hover , #right:hover{
+    opacity: 0.8;
+}
+
+
+#navb{
+    z-index: 10;
+    position: absolute;
+    left: 500px;
+    bottom: 0;
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    line-height: 55px;
+}
+#navb > div {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+#navb > div:hover{
+    background-color: white !important ;
+    cursor: pointer !important ;
+}
+#navb > div:nth-child(1){
+    background-color: white;
+}
+
+
+
 #midmenu {
     width: 100%;
     border: 1px solid #ddd;
+    padding-top: 30px;
 }
 #midwrap {
     justify-content: center;
+    height: 300px;
 }
 #midwrap li {
     display: inline-block;
@@ -84,9 +133,19 @@ div#toptitle {
 #midwrap>ul {
     display: flex;
 }
-#midwrap>ul>li {
-    margin: 20 40px;
+#midwrap>ul>li:nth-child(1) {
+    margin-left:40px ;
 }
+#midwrap>ul>li:nth-child(2) {
+    margin-left:330px ;
+}
+#midwrap>ul>li:nth-child(3) {
+    margin-left: 330px ;
+}
+#midwrap>ul>li:nth-child(4) {
+    margin-left: 330px;
+}
+
 #midwrap li:after {
     content: '';
     position: absolute;
@@ -100,8 +159,13 @@ div#toptitle {
     display: none;
 }
 #midcirclebox {
+    top: 5px;
+    left: 0;
     height: 250px;
     width: 250px;
+    position: absolute;
+    cursor: pointer;
+    transition:  0.2s ease-out; 
 }
 #midcirclebox>h4,p {
     text-align: center;
@@ -115,6 +179,22 @@ div#toptitle {
     color: #969696;
     font-size: 13px;
 }
+#midcirclebox:hover{
+    top: -15px;
+}
+.box-1{
+   
+}
+.box-2{
+    
+}
+.box-3{
+    
+}
+.box-4{
+    
+}
+
 #circle {
     width: 150px;
     height: 150px;
@@ -199,7 +279,7 @@ div#toptitle {
     display: inline-block;
     color: #777;
     font-size: 15px;
-position: absolute;
+    position: absolute;
     border-top: 0.5px solid #777;
     border-left: 0.5px solid #777;
     border-right: 0.5px solid #777;
@@ -231,16 +311,137 @@ position: absolute;
 #gonjidiv > a {
     color: #777;
 }
-#gonjidiv > dl {
+#gonjidiv  dl {
+    text-align: center;
+    padding-top: 15px;
+}
+#gonjidiv  dl  dt {
+    float: left;
+    font-size: 12px;
+}
+#gonjidiv dd {
+    font-size: 12px;
+}
+#gonjidiv li{
+    list-style: disc;
+}
+
+
+#lookarounddiv{
+    width: 400px;
+    height: 280px;
     position: relative;
-    margin: 0;
-    padding-right: 80px;
-}
-#gonjidiv > dl > dt {
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
+#photos{
+    position: absolute !important;
+    width: 4800px;
+    transition: left 0.2s ease-out; 
+    left: -400px;
+    z-index: -1;
+}
+#photos > div:nth-child(1) > article {
+    float: left !important;
+    position: relative;
+}
+#photos > div:nth-child(1) > article > img{
+    width: 400px !important;
+    height: 230px !important;
+}
+#photos > div:nth-child(1) > article > div {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background-color: rgba( 0, 0, 0, 0.5 );
+    bottom: 0;
+    color: white;
+    text-align: center;
+    line-height: 45px;
+}
+
+#changeimg{
+    
+    position: absolute !important;
+    width: 5600px;
+}
+#mainpic{
+    
+    height: 600px;
+    position: relative;
+    /* overflow: hidden; */
+}
+#changeimg{
+    transition: left 0.2s ease-out; 
+    position: relative;
+    width: 1400px;
+    overflow: hidden;
+    height: 600px;
+}
+#mainpicc{
+    position: absolute !important;
+    width: 5600px;
+    height: 600px;
+    left: -1400px;
+}
+#mainpicc > div:nth-child(1) > article {
+    float: left !important;
+    position: relative;
+}
+#mainpicc > div:nth-child(1) > article > img{
+    width: 1400px !important;
+    height: 600px !important;
+}
+
+
+
+
+
+#nav{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    line-height: 55px;
+}
+#nav > div{
+    display: inline-block;
+    background-color: lightgray;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+#nav > div:hover{
+    background-color: gray !important;
+    cursor: pointer !important;
+}
+#nav > div:nth-child(1){
+    background-color: gray;
+}
+
+#perv , #next{
+    color: white;
+    z-index: 3;
+    position: absolute;
+    top: 100px;
+    font-size: 30px;
+    cursor: pointer;
+    opacity: 0.3;
+}
+#perv{
+    left: 10px;
+}
+#next{
+    right: 10px;
+}
+#perv:hover , #next:hover{
+    opacity: 0.8;
+}
+
+
+
+
 
 
 #footerdiv {

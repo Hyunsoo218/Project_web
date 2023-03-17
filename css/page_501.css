@@ -182,9 +182,7 @@ li {
     float: left !important;
     position: relative;
 }
-#Slider-2 > div:nth-child(1) > article:hover {
-   cursor: pointer;
-}
+
 #Slider-1 > div:nth-child(1) > article > img{
     width: 800px !important;
     height: 400px !important;
@@ -200,6 +198,9 @@ li {
     text-align: center;
     line-height: 70px;
 }
+#Slider-2 > div:nth-child(1) > article:hover {
+    cursor: pointer;
+ }
 #but-1 , #but-2{
     color: white;
     z-index: 3;
