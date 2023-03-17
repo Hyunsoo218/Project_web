@@ -156,6 +156,14 @@ function changPage_201(num){
     }
     $("#mid").css("height", "" + he + "px");
 }
+function searchBtClick(){
+    if(document.getElementById("SearchForm").style.display == "block"){
+        document.getElementById("SearchForm").style.display = "none";
+    }
+    else{
+        document.getElementById("SearchForm").style.display = "block";
+    }
+}
 
 
 

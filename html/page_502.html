@@ -49,6 +49,11 @@
             }
         }
 
+        #board > thead > tr > th{ padding : 15px 5px 14px; border-bottom: 1px solid black;}
+        #board > tbody > tr > td {padding : 15px 5px 14px; border-bottom: 1px solid black; }
+        td { text-align: center;}
+        th { text-align: center;}
+
     </style>
 </head>
 <body>
@@ -134,10 +139,42 @@
         <div id="mid-right">
             <div id="mid-content-1">
                 <br>
-                <h2><a style="text-decoration:overline">공</a>지사항</h2>
+                <h2 style = "margin-bottom : 30px; border-bottom : 1px solid black; padding-bottom : 20px;"><a style="text-decoration:overline">공</a>지사항</h2>
+                <div id = "nav" style="border-bottom : 1px solid black; width : 100%; height : 40px;">
+                    <a style = "display : block;">
+                        <span id = "searchBt" onclick = "searchBtClick()" style = "float : right; border : 1px solid black; padding : 10px 20px; background-color : #ccc; border-bottom : none;">검색</span>
+                    </a>
+                </div>
+                <div id = "SearchForm" style = "display : none;">
+                    <form action="">
+                        <fieldset style = "border : none;">
+                            <input name = searchKeyword type="text" placeholder="검색어" style = "width : 90%;">
+                        </fieldset>
+                    </form>
+                </div>
+                <div id = "listBoard">
+                    <table cellspacing = 0; width="100%" id = "board">
+                        <thead >
+                            <tr >
+                                <th>번호</th>
+                                <th>제목</th>
+                                <th>작성자</th>
+                                <th>작성일</th>
+                                <th>조회수</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>치유본한의원 일산점 홈페이지를 개설하였습니다.</td>
+                                <td>치유본한의원</td>
+                                <td>2022-07-26</td>
+                                <td>225</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <hr />
-        
     </div>
 
     <br /><br />
