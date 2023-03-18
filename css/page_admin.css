@@ -1,0 +1,88 @@
+﻿html, body {
+    padding: 0;
+    margin: 0 auto;
+    font-size: 9pt;
+    color: #555;
+    background: #f4f5f6;
+    height: 100%;
+}
+#loginsection {
+    display: table-cell;
+    padding: 20px 20px 150px;
+    margin: 0 auto;
+    border: 0;
+    height: 100%;
+    vertical-align: middle;
+    width: 1440px;
+    height: 550px;
+    text-align: center;
+    
+}
+#loginsection > fieldset {
+    margin: 0 auto;
+    border: 0;
+    padding: 25px;
+    max-width: 370px;
+}
+legend {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 auto;
+}
+legend > h1 {
+    font-size: 33px;
+}
+legend > h3 {
+    font-size: 16px;
+    font-weight: 400;
+}
+fieldset > p {
+    display: block;
+    position: relative;
+    background: #fff;
+    border: 1px solid #cdcdd1;
+    border-radius: 3px;
+    overflow: hidden;
+    padding: 10px;
+}
+p > label {
+    display: block;
+    position: absolute;
+    width: 120px;
+    top: 0;
+    left: 0;
+    color: #aaa;
+    text-indent: 16px;
+    line-height: 36px;
+    text-align: left;
+}
+label::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 10px;
+    right: -15px;
+    top: 50%;
+    margin-top: -5px;
+    background: #ececec;
+}
+p > span {
+    float: right;
+}
+input {
+    width: 150px;
+    padding-right: 50px;
+     border: 0; 
+}
+button {
+    background-color: #1c68e0;
+    color: white;
+    border: 0;
+    border-radius: 3px;
+    width: 370px;
+    height: 41.5px;
+    font-size: 16.5px;
+
+}
