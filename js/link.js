@@ -136,6 +136,9 @@ window.onload = function(){
             
         } ,200);
     });
+    setInterval(function(){
+        $('#but-2').click();
+    } ,1500);
 }
 function changPage_201(num){
     for( let i = 1; i <= 4; i++ ){

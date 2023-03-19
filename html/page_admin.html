@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/page_admin.css" rel="stylesheet" type="text/css" />
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../js/admin.js"></script>
 </head>
 <body>
     <div id="loginsection">
@@ -18,23 +20,23 @@
             <P>
                 <label for="id">사이트 ID (계정ID)</label>
                 <span>
-                    <input type="text" placeholder="아이디">
+                    <input id="id" type="text" placeholder="아이디">
                 </span>
             </P>
             <P>
                 <label for="id">관리자ID</label>
                 <span>
-                    <input type="text" placeholder="부운영자 아이디" value="root">
+                    <input id="admin" type="text" placeholder="부운영자 아이디" value="root">
                 </span>
             </P>
             <P>
                 <label for="id">비밀번호</label>
                 <span>
-                    <input type="text" placeholder="패스워드">
+                    <input id="pass" type="text" placeholder="패스워드">
                 </span>
             </P>
             <nav>
-                <button type="submit">로그인</button>
+                <button id="login" type="submit">로그인</button>
             </nav>
         </fieldset>
     </div>
