@@ -6,41 +6,88 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.css">
-  <link rel="stylesheet" href="./css/dexx.css">
+  <link rel="stylesheet" href="./css/page_main.css">
   <script src="./js/jquery-1.11.2.min.js" charset="utf-8"></script>
-  <script src="./js/index.js" charset="utf-8"></script>
+  <script src="./js/page_main.js" charset="utf-8"></script>
 </head>
 
 <body>
   <div id="wrapmaster">
     <div id="wrap">
-      <div id="topmenudiv">
-        <div id="toptitle">
-          <a href="/index.html">
-            <img src="./jpg/logo1503.jpg" />
-          </a>
+      <style>
+        #menu > li > a::after{display: block; content:''; border-bottom : solid 2px orange; padding-bottom : 10px; transition : 250ms ease-in-out ;transform : scaleX(0);}
+        #menu > li > a:hover:after { transform: scaleX(1);}
+        #menu > li > a { display : inline-block; text-transform: uppercase}
+        #currentPage:after { display: block; content:''; border-bottom : solid 2px orange; padding-bottom : 0; transform : scaleX(1)!important;}
+        a { text-decoration: none; color : black;}
+        #menu > li > ul > li:hover > a { color: orange; }
+        #mid-menu-1 > div:nth-child(1) > a { color: white; }
+        #mid-menu-1 > div:nth-child(2):hover > a { color: white; }
+        #mid-menu-1 > div:nth-child(3):hover > a { color: white; }
+        #bottom-right form{
+            display: inline;
+        }
+        a {
+            width: 100%;
+            height: 100%;
+        }
+        .move:hover{ cursor: pointer}
+        @keyframes fadein {
+            0% {
+                opacity: 0;
+                margin-top : -25px;
+            }
+            100% {
+                opacity: 100%;
+                margin-top : 0px;
+            }
+        }
+
+        @keyframes fadeout {
+            0%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+
+    </style>
+      <div id="top">
+        <div id="top-left">
+            <div id="home">
+                <br>
+                <img class="move" onclick="go('main')" src="../image/mainlogo.png">
+            </div>
         </div>
-        <div id="topmenu">
-          <ul>
-            <li>한의원소개
-              <ul>
-                <li>한의원소개</li>
-                <li>오시는길</li>
-              </ul>
-            </li>
-            <li>자동차보험</li>
-            <li>통증클리닉</li>
-            <li>해독클리닉</li>
-            <li>시설 둘러보기
-              <ul>
-                <li class="goto" base="center" go="notice">시설둘러보기</li>
-                <li>공지사항</li>
-                <li>질문과 답변</li>
-              </ul>
-            </li>
-          </ul>
+        <div id="supbg">
+            <div id="top-right">          
+                <br><br>
+                <ul id="menu">
+                    <li>
+                        <a href="../html/page_501.html">시설 둘러보기</a>
+                        <ul style="left:-10px">
+                            <li class="move" onclick="go('501')"><a>시설둘러보기</a></li>
+                            <li class="move" onclick="go('502')"><a>공지사항</a></li>
+                            <li class="move" onclick="go('503')"><a>질문과답변</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../html/page_401.html">해독클리닉</a></li>
+                    <li><a href="../html/page_301.html">통증클리닉</a></li>
+                    <li>
+                        <a href="../html/page_201.html">자동차보험</a>
+                    </li>
+                    <li>
+                        <a href="../html/page_101.html">한의원소개</a>
+                        <ul style="left:-30px">
+                            <li class="move" onclick="go('101')"><a>한의원소개</a></li>
+                            <li class="move" onclick="go('102')"><a>오시는길</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
+    </div>
       <div id="mainpic">
         <div id="changeimg">
           <div id="mainpicc">
@@ -64,40 +111,48 @@
           <div id="midwrap">
             <ul>
               <li>
-                <div class="box-1" id="midcirclebox">
-                  <div id="circle">
-                    <img src="./jpg/medic.png">
+                <a href="../html/page_101.html">
+                  <div class="box-1" id="midcirclebox">
+                    <div id="circle">
+                      <img src="./jpg/medic.png">
+                    </div>
+                    <h4>한의원소개</h4>
+                    <p>항상 마음을 담아 정성껏 진료하겠습니다.</p>
                   </div>
-                  <h4>한의원소개</h4>
-                  <p>항상 마음을 담아 정성껏 진료하겠습니다.</p>
-                </div>
+                </a>
               </li>
               <li>
-                <div class="box-2" id="midcirclebox">
-                  <div id="circle">
-                    <img src="./jpg/car.png">
+                <a href="../html/page_201.html">
+                  <div class="box-2" id="midcirclebox">
+                    <div id="circle">
+                      <img src="./jpg/car.png">
+                    </div>
+                    <h4>자동차보험</h4>
+                    <p>자동차사고 한방치료로 치료받으세요.</p>
                   </div>
-                  <h4>자동차보험</h4>
-                  <p>자동차사고 한방치료로 치료받으세요.</p>
-                </div>
+                </a>
               </li>
               <li>
-                <div class="box-3" id="midcirclebox">
-                  <div id="circle">
-                    <img src="./jpg/man.png">
+                <a href="../html/page_301.html">
+                  <div class="box-3" id="midcirclebox">
+                    <div id="circle">
+                      <img src="./jpg/man.png">
+                    </div>
+                    <h4>통증클리닉</h4>
+                    <p>통증클리닉을 통해 치료받으세요.</p>
                   </div>
-                  <h4>통증클리닉</h4>
-                  <p>통증클리닉을 통해 치료받으세요.</p>
-                </div>
+                </a>
               </li>
               <li>
-                <div class="box-4" id="midcirclebox">
-                  <div id="circle">
-                    <img src="./jpg/man2.png">
+                <a href="../html/page_401.html">
+                  <div class="box-4" id="midcirclebox">
+                    <div id="circle">
+                      <img src="./jpg/man2.png">
+                    </div>
+                    <h4>해독클리닉</h4>
+                    <p>치유본 해독프로그램으로 치료받으세요.</p>
                   </div>
-                  <h4>해독클리닉</h4>
-                  <p>치유본 해독프로그램으로 치료받으세요.</p>
-                </div>
+                </a>
               </li>
             </ul>
           </div>
@@ -212,56 +267,30 @@
           </div>
         </div>
       </div>
-      <div id="footer">
-        <div class="width_wrap">
-          <div class="footer_01">
-            <div class="footer_logo">
-              <a href="/index.html">
-                <img src="./jpg/logo1503.jpg" style="vertical-align:middle;border:0;" alt="">
-              </a>
-            </div>
-            <div class="footer_info">
-              <div class="navi_foot">
-                <ul>
-                  <li>
-                    한의원소개
-                  </li>
-                  <li>
-                    자동차보험
-                  </li>
-                  <li>
-                    해독클리닉
-                  </li>
-                  <li>
-                    문의사항
-                  </li>
-                </ul>
-              </div>
-              <div class="address">
-                <ul>
-                  <li>상호: 치유본한의원</li>
-                  <li>대표자: 채기원</li>
-                  <li>주소: 경기 고양시 일산동구 중앙로1261번길 61 (장항동) 8층 일부 , 9층</li>
-                </ul>
-                <ul>
-                  <li>사업자 등록번호: 602-99-85584</li>
-                  <li>TEL: 031-903-8875</li>
-                  <li>FAX: 031-903-8874</li>
-                  <li>EMAIL: chiubon1@naver.com</li>
-                </ul>
-                <ul>
-                  <li>Copyright(c) 치유본한의원. All Rights Reserved.
-                    <a href=""><img src="./jpg/adm.jpg"></a>
-                    <a href="http://www.thechakan.kr" target="_blank"><img src="./jpg/remote.jpg"></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <div id="bottom">
+        <div id="bottom-left">
+            <br>
+            <img class = "move" onclick = "go('main')" src="../image/mainlogo.png" style=" width: 90%; height: 50%; padding-left: 233px;">
         </div>
-      </div>
+        <div id="bottom-right">
+            <br />
+            <ul>
+                <li><a href = "../html/page_101.html">한의원소개</a></li>
+                <li style="border-left: 1px solid black;"><a href = "../html/page_201.html">자동차보험</a></li>
+                <li style="border-left: 1px solid black;"><a href = "../html/page_401.html">해독클리닉</a></li>
+                <li style="border-left: 1px solid black;"><a href = "../html/page_503.html">문의사항</a></li>
+            </ul>
+            <br />
+            <div>
+                상호 : 치유본한의원 대표자 : 채기원 주소 : 경기 고양시 일산동구 중앙로1261번길 61 (장항동) 8층 일부 , 9층<br />
+                사업자 등록번호 : 602-99-85584 TEL : 031-903-8875 FAX : 031-903-8874 EMAIL : chiubon1@naver.<br />
+                Copyright(c) 치유본한의원. All Rights Reserved.
+                <form  action="page_admin.html"><button class = "move"><img src="../image/adminmode.jpg"></button></form>
+                <form  action="https://www.thechakan.kr/"><button class = "move"><img src="../image/thechkan.jpg"></button></form>
+            </div>
+        </div>
+    </div>
     </div> <!-- NOTE: end of wrap-->
   </div>
 </body>
-
 </html>

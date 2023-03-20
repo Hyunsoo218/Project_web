@@ -1,1 +1,296 @@
-main
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/jquery.mobile-1.4.5.css">
+  <link rel="stylesheet" href="../css/page_main.css">
+  <script src="../js/jquery-1.11.2.min.js" charset="utf-8"></script>
+  <script src="../js/page_main.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <div id="wrapmaster">
+    <div id="wrap">
+      <style>
+        #menu > li > a::after{display: block; content:''; border-bottom : solid 2px orange; padding-bottom : 10px; transition : 250ms ease-in-out ;transform : scaleX(0);}
+        #menu > li > a:hover:after { transform: scaleX(1);}
+        #menu > li > a { display : inline-block; text-transform: uppercase}
+        #currentPage:after { display: block; content:''; border-bottom : solid 2px orange; padding-bottom : 0; transform : scaleX(1)!important;}
+        a { text-decoration: none; color : black;}
+        #menu > li > ul > li:hover > a { color: orange; }
+        #mid-menu-1 > div:nth-child(1) > a { color: white; }
+        #mid-menu-1 > div:nth-child(2):hover > a { color: white; }
+        #mid-menu-1 > div:nth-child(3):hover > a { color: white; }
+        #bottom-right form{
+            display: inline;
+        }
+        a {
+            width: 100%;
+            height: 100%;
+        }
+        .move:hover{ cursor: pointer}
+        @keyframes fadein {
+            0% {
+                opacity: 0;
+                margin-top : -25px;
+            }
+            100% {
+                opacity: 100%;
+                margin-top : 0px;
+            }
+        }
+
+        @keyframes fadeout {
+            0%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+
+    </style>
+      <div id="top">
+        <div id="top-left">
+            <div id="home">
+                <br>
+                <img class="move" onclick="go('main')" src="../image/mainlogo.png">
+            </div>
+        </div>
+        <div id="supbg">
+            <div id="top-right">          
+                <br><br>
+                <ul id="menu">
+                    <li>
+                        <a href="../html/page_501.html">시설 둘러보기</a>
+                        <ul style="left:-10px">
+                            <li class="move" onclick="go('501')"><a>시설둘러보기</a></li>
+                            <li class="move" onclick="go('502')"><a>공지사항</a></li>
+                            <li class="move" onclick="go('503')"><a>질문과답변</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../html/page_401.html">해독클리닉</a></li>
+                    <li><a href="../html/page_301.html">통증클리닉</a></li>
+                    <li>
+                        <a href="../html/page_201.html">자동차보험</a>
+                    </li>
+                    <li>
+                        <a href="../html/page_101.html">한의원소개</a>
+                        <ul style="left:-30px">
+                            <li class="move" onclick="go('101')"><a>한의원소개</a></li>
+                            <li class="move" onclick="go('102')"><a>오시는길</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+      <div id="mainpic">
+        <div id="changeimg">
+          <div id="mainpicc">
+            <div>
+              <article><img src="../image/img2.jpg"></article>
+              <article><img src="../image/img1.jpg"></article>
+              <article><img src="../image/img2.jpg"></article>
+              <article><img src="../image/img1.jpg"></article>
+            </div>
+          </div>
+          <div id="navb">
+            <div></div>
+            <div></div>
+          </div>
+          <div id="left"> ◀ </div>
+          <div id="right"> ▶ </div>
+        </div>
+      </div>
+      <div class="mblock">
+        <div id="midmenu">
+          <div id="midwrap">
+            <ul>
+              <li>
+                <a href="../html/page_101.html">
+                  <div class="box-1" id="midcirclebox">
+                    <div id="circle">
+                      <img src="../image/medic.png">
+                    </div>
+                    <h4>한의원소개</h4>
+                    <p>항상 마음을 담아 정성껏 진료하겠습니다.</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="../html/page_201.html">
+                  <div class="box-2" id="midcirclebox">
+                    <div id="circle">
+                      <img src="../image/car.png">
+                    </div>
+                    <h4>자동차보험</h4>
+                    <p>자동차사고 한방치료로 치료받으세요.</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="../html/page_301.html">
+                  <div class="box-3" id="midcirclebox">
+                    <div id="circle">
+                      <img src="../image/man.png">
+                    </div>
+                    <h4>통증클리닉</h4>
+                    <p>통증클리닉을 통해 치료받으세요.</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="../html/page_401.html">
+                  <div class="box-4" id="midcirclebox">
+                    <div id="circle">
+                      <img src="../image/man2.png">
+                    </div>
+                    <h4>해독클리닉</h4>
+                    <p>치유본 해독프로그램으로 치료받으세요.</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div id="Mb-menu">
+            <div id="Mb-wrap">
+              <ul>
+                <li>
+                  <div id="Mb-box">
+                    <div id="tabs">
+                      <span id="gonji" class="contentmenu">공지사항 <a>+</a></span><span id="lookaround"
+                        class="contentmenu">시설둘러보기 <a>+</a></span>
+                    </div>
+                    <div id="contentrightdiv">
+                      <div id="gonjidiv" class="contentmenudiv">
+                        <a href="">
+                          <ul>
+                            <li>
+                              <dl>
+                                <dt>치유본한의원 일산점 홈페이지를 개설하였...</dt>
+                                <dd>22.07.26</dd>
+                              </dl>
+                            </li>
+                          </ul>
+                        </a>
+                      </div>
+                      <div id="lookarounddiv" style="display: none;" class="contentmenudiv">
+                        <div id="photos">
+                          <div>
+                            <article><img src="../image/501/10.jpg">
+                              <div>다이슨</div>
+                            </article>
+                            <article><img src="../image/501/1.jpg">
+                              <div>1인실</div>
+                            </article>
+                            <article><img src="../image/501/2.jpg">
+                              <div>1인실 2</div>
+                            </article>
+                            <article><img src="../image/501/3.jpg">
+                              <div>1인실 뷰</div>
+                            </article>
+                            <article><img src="../image/501/4.jpg">
+                              <div>2인실</div>
+                            </article>
+                            <article><img src="../image/501/5.jpg">
+                              <div>8층 복도</div>
+                            </article>
+                            <article><img src="../image/501/6.jpg">
+                              <div>8층 사우나실</div>
+                            </article>
+                            <article><img src="../image/501/7.jpg">
+                              <div>8층 휴게공간</div>
+                            </article>
+                            <article><img src="../image/501/8.jpg">
+                              <div>9층 복도</div>
+                            </article>
+                            <article><img src="../image/501/9.jpg">
+                              <div>9층 접수데스크</div>
+                            </article>
+                            <article><img src="../image/501/10.jpg">
+                              <div>다이슨</div>
+                            </article>
+                            <article><img src="../image/501/1.jpg">
+                              <div>1인실</div>
+                            </article>
+                          </div>
+                        </div>
+                        <div id="nav">
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                        </div>
+                      </div>
+                      <div id="perv"> ◀ </div>
+                      <div id="next"> ▶ </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="Mb-box">
+                    <div id="Mb-content">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12928.390861556487!2d128.6224266!3d35.8956224!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3565e1bb3ae69edd%3A0x8aa4f6b999146d66!2z7JiB7KeE7KCE66y464yA7ZWZ6rWQIOuzte2YhOy6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1678692052798!5m2!1sko!2skr"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="Mb-box">
+                    <div id="title">
+                      <c>치유본한의원 고객센터</c>
+                      <br><br>
+                      <b>031-903-8875</b>
+                    </div>
+                    <br><br>
+                    <div id="schedule">
+                      <span>평일</span> AM 09:00 ~ PM 07:00 <br>
+                      <span>점심시간</span> PM 12:30 ~ PM 1:30 <br>
+                      <span>토,일,공휴일</span> AM 09:00 ~ PM03:00 <br>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="bottom">
+        <div id="bottom-left">
+            <br>
+            <img class = "move" onclick = "go('main')" src="../image/mainlogo.png" style=" width: 90%; height: 50%; padding-left: 233px;">
+        </div>
+        <div id="bottom-right">
+            <br />
+            <ul>
+                <li><a href = "../html/page_101.html">한의원소개</a></li>
+                <li style="border-left: 1px solid black;"><a href = "../html/page_201.html">자동차보험</a></li>
+                <li style="border-left: 1px solid black;"><a href = "../html/page_401.html">해독클리닉</a></li>
+                <li style="border-left: 1px solid black;"><a href = "../html/page_503.html">문의사항</a></li>
+            </ul>
+            <br />
+            <div>
+                상호 : 치유본한의원 대표자 : 채기원 주소 : 경기 고양시 일산동구 중앙로1261번길 61 (장항동) 8층 일부 , 9층<br />
+                사업자 등록번호 : 602-99-85584 TEL : 031-903-8875 FAX : 031-903-8874 EMAIL : chiubon1@naver.<br />
+                Copyright(c) 치유본한의원. All Rights Reserved.
+                <form  action="page_admin.html"><button class = "move"><img src="../image/adminmode.jpg"></button></form>
+                <form  action="https://www.thechakan.kr/"><button class = "move"><img src="../image/thechkan.jpg"></button></form>
+            </div>
+        </div>
+    </div>
+    </div> <!-- NOTE: end of wrap-->
+  </div>
+</body>
+</html>
